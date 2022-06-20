@@ -1,0 +1,63 @@
+body{
+    background-color:  #EEF9BF;
+    font-family: 'Roboto', sans-serif;   
+}
+header{
+    font-size: 56px;
+    font-weight: 700;
+    color: #75B79E;
+    font-family: 'Roboto';
+    text-align: center;
+    margin-top: 50px;
+}
+
+.frontLetter{
+    
+    width: 200px;
+    height: 250px;
+    margin: 40px 5px 0px 5px;
+    position: relative;
+}
+.face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 146px;
+    border-radius: 5px;
+    background-color: #A7E9AF;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: absolute;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.face img{
+    width: 100px;
+    height: 100px;
+}
+.gameBody{
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.back-face img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    backface-visibility: visible;
+    
+    
+  }
+  .back-face{
+  transform: rotateY(180deg);
+  }
+  .rotation .back-face{
+    transform: rotateY(0deg);
+}
+  .rotation .front-face{
+    transform: rotateY(-180deg);
+  }
